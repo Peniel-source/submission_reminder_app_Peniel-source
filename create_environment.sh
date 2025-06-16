@@ -115,6 +115,10 @@ cat > "${dir_name}/startup.sh" << 'EOF'
 ./app/reminder.sh
 EOF
 
+echo ""
+echo "Startup script created"
 #Modifying permissions for all files with .sh extension
 find . -type f -name "*.sh" -exec chmod u+x {} \;  
 
+echo ""
+echo "Environment fully created."
