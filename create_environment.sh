@@ -3,6 +3,12 @@
 #Prompt user to enter their name
 read -p "Enter your name: " user_name
 
+#Keep the user in a loop until they enter an name for the directory. user_name cannot be empty.
+while [[ -z "$user_name" ]]; do
+	echo "You have to enter a name!"
+	read -p "Please enter your name: " user_name
+done
+
 #Creating parent directory with user input
 dir_name=submission_reminder_$user_name
 
@@ -99,7 +105,7 @@ if [ ! -d "$dir_name" ]; then
 	sleep 1
 	echo "Done"
 	echo ""
-	fileREMINDER
+fileREMINDER
 	fileFUNCTIONS
 	fileSUBMISSIONS
 	fileCONFIG
@@ -118,7 +124,13 @@ EOF
 echo ""
 echo "Startup script created"
 #Modifying permissions for all files with .sh extension
-find . -type f -name "*.sh" -exec chmod u+x {} \;  
 
+find . -type f -name "*.sh" -exec chmod u+x {} \;
+sleep 1
+echo ""
+echo "....Permissions updated...."
+
+#Finalizing everything.
+sleep 0.7
 echo ""
 echo "Environment fully created."
