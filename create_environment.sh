@@ -72,7 +72,7 @@ Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
-Kwame, Shell Scripting, not submitted"
+Kwame, Shell Scripting, not submitted
 Fred, Python Programming, submitted
 Anita, Databases, not submitted
 Matthew, Web Infrastructure, submitted
@@ -105,7 +105,7 @@ if [ ! -d "$dir_name" ]; then
 	sleep 1
 	echo "Done"
 	echo ""
-fileREMINDER
+	fileREMINDER
 	fileFUNCTIONS
 	fileSUBMISSIONS
 	fileCONFIG
